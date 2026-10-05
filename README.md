@@ -11,11 +11,15 @@ This project implements the Flask and SQLite user management API specified in th
 - Python tests: **9 passed**, including persistence through an independent SQLite connection, validation, missing records, CORS, and repeatable schema initialization.
 - A database commit was made on `main`; REST changes were committed on `feature/rest-api` and merged into `main` with a merge commit.
 
-## Steps requiring account or browser access
+## Postman workspace and remaining steps
 
-**GitHub repository creation and push/pull, Postman online workspace creation/import, and the direct browser GET check are pending.** GitHub and Postman were signed out. The embedded browser blocked navigation to the local API. The local API was verified through real HTTP requests and Newman. No online repository URL or Postman workspace completion is claimed.
+The collection and environment have now been imported into Anthony Feghali's Postman workspace, with Flask local selected. Actual workspace screenshots are in `proof-screenshots/postman-workspace`: collection overview, five CRUD examples, environment values, and a request using `{{base_url}}`.
 
-The `proof-screenshots` folder contains actual browser captures of recorded execution evidence. These are **not Postman or GitHub application screenshots**. Each screenshot identifies its evidence; the original JSON and text results are included for inspection. If the instructor requires screenshots specifically inside Postman, import the two JSON files, run the collection, and capture the requests, examples, environment and runner results there.
+[Open the Postman collection](https://a-r-feghali-486396.postman.co/workspace/5229428a-ad27-46da-89bc-4648eaf32e3e/collection/58733018-df64eaf9-04a0-4219-b865-699070c98254).
+
+The example screenshots show the saved responses imported from the verified local execution. They do not represent a new live run in the Postman web client. The web client currently uses Cloud Agent; localhost requests need the desktop client or Desktop Agent. The original 13 screenshots in the parent proof folder show recorded execution reports; the eight new screenshots in the subfolder show the actual Postman application.
+
+**GitHub repository creation and push/pull and the direct browser GET check remain pending.** No GitHub push has been made from this project. The API and collection were successfully verified locally using HTTP requests and Newman.
 
 ## Start the API
 
@@ -61,7 +65,7 @@ Example POST body:
 
 ## Use in Postman
 
-1. Sign in and create or select a private workspace for the lab.
+1. Open the workspace linked above. The collection and environment are already imported there. To use a different workspace, sign in and select it.
 2. Import `postman/Flask user app.postman_collection.json` and `postman/Flask local.postman_environment.json`.
 3. Select **Flask local** as the active environment and confirm `base_url` is `http://127.0.0.1:5000`.
 4. Keep Flask running. Use the desktop client, or a desktop agent with the web client, to reach localhost.
@@ -123,7 +127,7 @@ Open `evidence/index.html` locally to browse the supporting reports. The PNG scr
 - `11`: nine passing Python tests.
 - `12`: actual SQLite schema and local branch/merge history before the final evidence commit.
 
-The raw results and screenshots were collected on October 5, 2026. Request examples use fictional sample data. Screenshots are evidence of the recorded local run, not claims that the account-dependent tasks were completed.
+The raw results and screenshots were collected on October 5, 2026. Request examples use fictional sample data. The postman-workspace subfolder documents the completed workspace import and saved examples. GitHub publishing remains pending.
 
 ## References
 
