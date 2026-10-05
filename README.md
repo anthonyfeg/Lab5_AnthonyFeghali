@@ -19,7 +19,7 @@ The collection and environment have now been imported into Anthony Feghali's Pos
 
 The example screenshots show the saved responses imported from the verified local execution. They do not represent a new live run in the Postman web client. The web client currently uses Cloud Agent; localhost requests need the desktop client or Desktop Agent. The original 13 screenshots in the parent proof folder show recorded execution reports; the eight new screenshots in the subfolder show the actual Postman application.
 
-**GitHub repository creation and push/pull and the direct browser GET check remain pending.** No GitHub push has been made from this project. The API and collection were successfully verified locally using HTTP requests and Newman.
+The project is published at [anthonyfeg/Lab5_AnthonyFeghali](https://github.com/anthonyfeg/Lab5_AnthonyFeghali). Both `main` and `feature/rest-api` are pushed. The direct browser GET check remains pending because the embedded browser blocked local API navigation; the API and collection were successfully verified through real HTTP requests and Newman.
 
 ## Start the API
 
@@ -92,30 +92,24 @@ The captured run output is in `newman-results.txt`, with a full machine-readable
 
 ## Git and GitHub
 
-The local repository is included as the hidden `.git` directory in the submission ZIP. Inspect the history with:
+The repository is published at [anthonyfeg/Lab5_AnthonyFeghali](https://github.com/anthonyfeg/Lab5_AnthonyFeghali). Both `main` and `feature/rest-api` are available remotely. The local repository is also included as the hidden `.git` directory in the submission ZIP. Inspect the history and configured remote with:
 
 ```bash
 git log --graph --all --oneline --decorate
 git status
+git remote -v
 ```
 
-To publish after signing into GitHub, create an empty private repository and replace `YOUR_REPOSITORY_URL` below with its URL:
+To fetch the published branches on another computer:
 
 ```bash
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
-git push -u origin feature/rest-api
+git clone https://github.com/anthonyfeg/Lab5_AnthonyFeghali.git
+cd Lab5_AnthonyFeghali
+git fetch --all
+git branch -a
 ```
 
-To demonstrate the lab's remote pull step once the remote exists:
-
-```bash
-git switch feature/rest-api
-git pull --ff-only origin main
-git switch main
-```
-
-No remote push or pull has been performed in the supplied local history. Database contents and virtual environments are excluded from Git. The ZIP includes the demonstration database separately.
+The Git history shows the database work, REST feature branch, merge into `main`, verified Postman artifacts, and actual workspace screenshots. Database contents and virtual environments are excluded from Git. The ZIP includes the demonstration database separately.
 
 ## Proof files
 
@@ -127,7 +121,7 @@ Open `evidence/index.html` locally to browse the supporting reports. The PNG scr
 - `11`: nine passing Python tests.
 - `12`: actual SQLite schema and local branch/merge history before the final evidence commit.
 
-The raw results and screenshots were collected on October 5, 2026. Request examples use fictional sample data. The postman-workspace subfolder documents the completed workspace import and saved examples. GitHub publishing remains pending.
+The raw results and screenshots were collected on October 5, 2026. Request examples use fictional sample data. The postman-workspace subfolder documents the completed workspace import and saved examples. GitHub publishing is complete.
 
 ## References
 
