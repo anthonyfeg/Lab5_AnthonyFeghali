@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>04 Update user</title><style>body{font:17px -apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#17212b;background:#f5f7fa;margin:0;padding:36px 48px;max-width:1250px}h1{font-size:30px;margin:10px 0}h2{font-size:20px;margin:18px 0 10px}.meta{color:#536170;font-size:14px}pre{background:white;border:1px solid #d5dce3;border-radius:5px;padding:18px;font:15px/1.45 Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere}a{color:#1f5fa5}nav{margin:0 0 18px}table{border-collapse:collapse;background:white;width:100%;font-size:16px}td,th{border:1px solid #d5dce3;padding:11px;text-align:left}.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}.ok{color:#146d3d}</style><nav><a href="index.html">Lab 5 evidence index</a></nav><div class="meta">LAB 5 · RECORDED EXECUTION EVIDENCE · 5 OCTOBER 2026</div><h1>04 Update user</h1><p><b>PUT</b> http://127.0.0.1:5000/api/users/update</p><p class="ok"><b>Observed HTTP 200</b> · Response captured from the running Flask API</p><div class="cols"><section><h2>Request JSON</h2><pre>{
+  &quot;name&quot;: &quot;John Doe Updated&quot;,
+  &quot;email&quot;: &quot;john.doe@example.com&quot;,
+  &quot;phone&quot;: &quot;067765434567&quot;,
+  &quot;address&quot;: &quot;Beirut&quot;,
+  &quot;country&quot;: &quot;Lebanon&quot;,
+  &quot;user_id&quot;: 1
+}</pre></section><section><h2>Response JSON</h2><pre>{
+  &quot;address&quot;: &quot;Beirut&quot;,
+  &quot;country&quot;: &quot;Lebanon&quot;,
+  &quot;email&quot;: &quot;john.doe@example.com&quot;,
+  &quot;name&quot;: &quot;John Doe Updated&quot;,
+  &quot;phone&quot;: &quot;067765434567&quot;,
+  &quot;user_id&quot;: 1
+}</pre></section></div><p class="meta">Actual request and response saved in live-responses.json and in the collection example. This is an evidence report, not the Postman application.</p></html>

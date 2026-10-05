@@ -1,0 +1,5 @@
+*   fb871cb (HEAD -> main) Merge tested REST API into main
+|\  
+| * 4c46f11 (feature/rest-api) Expose five Flask REST endpoints and verify CRUD behavior
+|/  
+* 9f714bb Create SQLite user database and CRUD functions

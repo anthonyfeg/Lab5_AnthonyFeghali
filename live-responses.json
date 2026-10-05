@@ -1,0 +1,184 @@
+[
+  {
+    "name": "01 Create user",
+    "method": "POST",
+    "url": "http://127.0.0.1:5000/api/users/add",
+    "request": {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "067765434567",
+      "address": "John Doe Street, Innsbruck",
+      "country": "Austria"
+    },
+    "status": 201,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "145",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": {
+      "address": "John Doe Street, Innsbruck",
+      "country": "Austria",
+      "email": "john.doe@example.com",
+      "name": "John Doe",
+      "phone": "067765434567",
+      "user_id": 1
+    }
+  },
+  {
+    "name": "02 Get all users",
+    "method": "GET",
+    "url": "http://127.0.0.1:5000/api/users",
+    "request": null,
+    "status": 200,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "147",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": [
+      {
+        "address": "John Doe Street, Innsbruck",
+        "country": "Austria",
+        "email": "john.doe@example.com",
+        "name": "John Doe",
+        "phone": "067765434567",
+        "user_id": 1
+      }
+    ]
+  },
+  {
+    "name": "03 Get user by ID",
+    "method": "GET",
+    "url": "http://127.0.0.1:5000/api/users/1",
+    "request": null,
+    "status": 200,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "145",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": {
+      "address": "John Doe Street, Innsbruck",
+      "country": "Austria",
+      "email": "john.doe@example.com",
+      "name": "John Doe",
+      "phone": "067765434567",
+      "user_id": 1
+    }
+  },
+  {
+    "name": "04 Update user",
+    "method": "PUT",
+    "url": "http://127.0.0.1:5000/api/users/update",
+    "request": {
+      "name": "John Doe Updated",
+      "email": "john.doe@example.com",
+      "phone": "067765434567",
+      "address": "Beirut",
+      "country": "Lebanon",
+      "user_id": 1
+    },
+    "status": 200,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "133",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": {
+      "address": "Beirut",
+      "country": "Lebanon",
+      "email": "john.doe@example.com",
+      "name": "John Doe Updated",
+      "phone": "067765434567",
+      "user_id": 1
+    }
+  },
+  {
+    "name": "05 Verify updated user",
+    "method": "GET",
+    "url": "http://127.0.0.1:5000/api/users/1",
+    "request": null,
+    "status": 200,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "133",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": {
+      "address": "Beirut",
+      "country": "Lebanon",
+      "email": "john.doe@example.com",
+      "name": "John Doe Updated",
+      "phone": "067765434567",
+      "user_id": 1
+    }
+  },
+  {
+    "name": "06 Delete user",
+    "method": "DELETE",
+    "url": "http://127.0.0.1:5000/api/users/delete/1",
+    "request": null,
+    "status": 200,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "39",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": {
+      "status": "User deleted successfully"
+    }
+  },
+  {
+    "name": "07 Verify deletion",
+    "method": "GET",
+    "url": "http://127.0.0.1:5000/api/users/1",
+    "request": null,
+    "status": 404,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "27",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": {
+      "error": "User not found"
+    }
+  },
+  {
+    "name": "08 Verify final list",
+    "method": "GET",
+    "url": "http://127.0.0.1:5000/api/users",
+    "request": null,
+    "status": 200,
+    "headers": {
+      "Server": "Werkzeug/3.1.9 Python/3.12.14",
+      "Date": "Mon, 05 Oct 2026 09:53:59 GMT",
+      "Content-Type": "application/json",
+      "Content-Length": "3",
+      "Access-Control-Allow-Origin": "*",
+      "Connection": "close"
+    },
+    "response": []
+  }
+]

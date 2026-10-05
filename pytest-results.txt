@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /Users/anthony/Documents/Codex/2026-10-05/new-chat/work/lab-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/anthony/Documents/Codex/2026-10-05/new-chat
+collecting ... collected 9 items
+
+outputs/Lab5/test_app.py::test_crud_and_sqlite_persistence PASSED        [ 11%]
+outputs/Lab5/test_app.py::test_invalid_payload[None] PASSED              [ 22%]
+outputs/Lab5/test_app.py::test_invalid_payload[payload1] PASSED          [ 33%]
+outputs/Lab5/test_app.py::test_invalid_payload[payload2] PASSED          [ 44%]
+outputs/Lab5/test_app.py::test_invalid_payload[payload3] PASSED          [ 55%]
+outputs/Lab5/test_app.py::test_invalid_payload[payload4] PASSED          [ 66%]
+outputs/Lab5/test_app.py::test_missing_user_and_bad_id PASSED            [ 77%]
+outputs/Lab5/test_app.py::test_bad_json_content_type_and_cors PASSED     [ 88%]
+outputs/Lab5/test_app.py::test_idempotent_schema PASSED                  [100%]
+
+============================== 9 passed in 0.07s ===============================
